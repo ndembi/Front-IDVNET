@@ -37,3 +37,71 @@
     <img src="assets/images/sadmin.jpg" alt="third slide" style="display: block; width: 100%;">
   </slide>
 </carousel>
+<button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Toggle collapse
+</button>
+<hr>
+<div id="collapseBasic" [collapse]="isCollapsed" class="card card-block card-header">
+  <div class="well well-lg">Some content</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-12 col-md-4 form-group">
+    <input type="text" placeholder="Datepicker" class="form-control" bsDatepicker>
+  </div>
+  <div class="col-xs-12 col-12 col-md-4 form-group">
+    <input type="text" placeholder="Daterangepicker" class="form-control" bsDaterangepicker>
+  </div>
+</div>
+<pagination [totalItems]="70"></pagination>
+<button type="button" class="btn btn-default btn-secondary" popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+  popoverTitle="Popover on right" placement="right">
+  Popover on right
+</button>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="mb-2">
+      <progressbar [value]="55"></progressbar>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="mb-2">
+      <progressbar [value]="22" type="warning" [striped]="true">22%</progressbar>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="mb-2">
+      <progressbar max="200" [value]="166" type="danger" [striped]="true" [animate]="true"><i>166 / 200</i></progressbar>
+    </div>
+  </div>
+</div>
+<div>
+  <tabset>
+    <tab heading="Basic title" id="tab1">Basic content</tab>
+    <tab heading="Basic Title 1">Basic content 1</tab>
+    <tab heading="Basic Title 2">Basic content 2</tab>
+  </tabset>
+</div>
+<timepicker [(ngModel)]="mytime"></timepicker>
+<pre class="alert alert-info">Time is: {{mytime}}</pre>
+<div>
+  <rating [max]="10" [(ngModel)]="x" [customTemplate]="t" style="color: #0275d8;font-size: 20px;"></rating>
+  <b>(
+    <i>Rate:</i> {{x}})</b>
+  <ng-template #t let-index="index" let-value="value">{{index
+    < value ? '&#9745;' : '&#9744;'}}</ng-template>
+</div>
+
+<div>
+  <rating [max]="10" [(ngModel)]="y" [customTemplate]="tt"></rating>
+  <b>(
+    <i>Rate:</i> {{y}})</b>
+  <ng-template #tt let-i="index" let-v="value">
+    <button class="btn btn-{{i < v ? 'warning' : 'default'}}">
+      {{i
+      < v ? '&#9733;' : '&#9734;'}} </button>
+  </ng-template>
+</div>
+<button type="button" class="btn btn-primary" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Simple demo
+</button>
+<pre class="card card-block card-header mb-3">Model: {{selected | json}}</pre>
+<input [(ngModel)]="selected" [typeahead]="states" class="form-control">
