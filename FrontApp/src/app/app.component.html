@@ -1,20 +1,102 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="row aurore">
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">MagOnline</a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <a href="#" class="nav-link">MENU</a>
+  </nav>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<div class="row">
+  <div class="col-md-8">
+  <carousel>
+    <slide>
+      <img src="{{src1}}" alt="first slide" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>{{label1}}</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores odit, consequuntur commodi quaerat provident eligendi mollitia enim iste facilis odio vero, corrupti praesentium cumque exercitationem aliquid excepturi nam, ducimus delectus.</p>
+      </div>
+    </slide>
+    <slide>
+      <img src="{{src2}}" alt="first slide" style="display: block; width: 100%;">
+    </slide>
+    <slide>
+      <img src="{{src3}}" alt="second slide" style="display: block; width: 100%;">
+    </slide>
+    <slide>
+      <img src="{{src4}}" alt="third slide" style="display: block; width: 100%;">
+    </slide>
+  </carousel>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{src1}}" alt="{{label1}}">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    
+  </div>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{src2}}" alt="{{label1}}">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="card">
+    <img src="{{src3}}" class="img-fluid" alt="Responsive image">
+  </div>
+ 
+</div>
+<div class="row aurore">
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem inventore voluptas maiores adipisci illum cupiditate numquam possimus modi velit, laudantium</p>
+  <h2>MAGONLINE</h2>
+ 
+</div>
+<div class="row">
+  <p class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, necessitatibus omnis consequatur dignissimos totam quidem dolor impedit dolores dolore tempore distinctio tenetur iste voluptatum praesentium nisi eveniet quos sint deleniti?</p>
+</div>
+<div class="row card">
+  <div class="col-xs-6 col-6 col-md-5 col-lg-3">
+    <bs-sortable [(ngModel)]="itemStringsLeft" itemClass="sortable-item" itemActiveClass="sortable-item-active" placeholderItem="Drag here"
+      placeholderClass="placeholderStyle" wrapperClass="sortable-wrapper"></bs-sortable>
+    <!-- <pre class="code-preview">model: {{ itemStringsLeft | json }}</pre> -->
+  </div>
+  <div class="col-xs-6 col-6 col-md-5 col-lg-3">
+    <bs-sortable [(ngModel)]="itemStringsRight" itemClass="sortable-item" itemActiveClass="sortable-item-active" placeholderItem="Drag here"
+      placeholderClass="sortable-item" wrapperClass="sortable-wrapper"></bs-sortable>
+   <!--  <pre class="code-preview">model: {{ itemStringsRight | json }}</pre> -->
+  </div>
+</div>
+<div class="row">
+  <img src="{{src3}}" class="rounded float-left img-thumbnail" alt="...">
+  <img src="{{src4}}" class="rounded float-right img-thumbnail" alt="...">
+</div>
+<div class="row">
+  <img src="{{src1}}" class="rounded float-left img-thumbnail" alt="...">
+  <img src="{{src2}}" class="rounded float-right img-thumbnail" alt="...">
+</div>
+<footer>
+  <div class="row aurore">
+    <ul class="nav">
+      <li class="nav-item"><a href="" class="nav-link fa fa-twitter">twitter</a></li>
+      <li class="nav-item">
+        <a href="" class="nav-link fa fa-twitter">facebook</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link  fa fa-twitter">github</a>
+      </li>
+      </ul>
+  </div>
+</footer>

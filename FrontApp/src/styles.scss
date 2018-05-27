@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+.aurore{
+    background-color: #000;
+    color: #bfbfbf;
+    background-repeat:space;
+    background-image: url(assets/images/aurore.jpg);    
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
