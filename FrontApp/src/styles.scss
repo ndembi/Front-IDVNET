@@ -3,8 +3,14 @@
     background-color: #000;
     color: #bfbfbf;
     background-repeat:space;
-    background-image: url(assets/images/aurore.jpg);    
+    background-image: url(assets/images/aurore.jpg);
     background-attachment: fixed;
     background-position: center;
     position: relative;
+}
+
+.mg-img{
+    display: block;
+    width: 40%;
+    height: 10cm;
 }
