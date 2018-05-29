@@ -6,9 +6,13 @@
     background-image: url(assets/images/aurore.jpg);
     background-attachment: fixed;
     background-position: center;
-    position: relative;
+    position: relative;    
 }
-
+.mg-head{
+    z-index: 1;
+    background-color:white;
+    position: fixed;
+}
 .mg-img{
     display: block;
     width: 40%;
@@ -18,7 +22,7 @@
 .mg-carousel{
     height: 10cm;
     margin-bottom: 3cm;
-    margin-top: 1cm;
+    margin-top: 4cm;
 }
 
 .mg-foot{
@@ -37,6 +41,7 @@
 }
 
 .mg-bg2{
+    margin-bottom: 2cm;  
   background-image: url(assets/images/bg2.png);
   margin: 0%;
   background-repeat: no-repeat;
@@ -44,4 +49,8 @@
 
 .mg-bg3{
    background-image: url(assets/images/bgff.png);
+}
+span.nav-right{
+    margin-left: 910px;
+
 }
